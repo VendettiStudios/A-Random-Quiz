@@ -16,6 +16,9 @@ startQuiz.onclick = function () {
     revealQuestion();
 };
 
+// edit v
+
+
 // this function will display the questions
 function revealQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
@@ -23,16 +26,32 @@ function revealQuestion() {
 };
 
 
-// Need timer function to reveal
+// Need timer/score countdown to reveal when click start
+function clockTick(){
 
+}
 // Need answers to reveal with buttons
 
 // Need answers when clicked to display wrong or right 
-// then forward to next question, subtracting 15 seconds 
-// if incorrect
+// then advance to next question, subtracting 15 seconds 
+// from the countdown if incorrect
+function answerClick(){
 
-// need final screen
+}
+// need final screen that triggers when array is finished, 
+// with final score/time still displayed
+function quizEnd(){
+
+}
+
+
+// need to store and parse score/time and alias to scores page upon click submit
 
 // need Alias input box
+function checkForEnter(event){
 
-// need to store and parse score and alias to scores page
+}
+// need submit button
+submitButton.onclick = function saveScore(){
+
+}
