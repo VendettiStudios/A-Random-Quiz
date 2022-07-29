@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"
-      rel="stylesheet"
-    />
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" rel="stylesheet" />
     <title>A Random Quiz</title>
-  </head>
+</head>
 
-  <body class="has-background-primary">
-    <!-- Link to scores page -->
-    <span class="columns is-mobile is-centered p-4">
-      <a href="scores.html"><button class="button is-link">Scores!</button></a>
-    </span>
-    <!-- Quiz container -->
-    <section class="quizContainer">
-      <!-- timer function -->
-      <span class="timer">
-        Score / Time left:
-        <p id="seconds"></p
-      ></span>
-      <section id="startScreen">
-        <!-- Title -->
-        <h1>A Random Quiz Built With JavaScript</h1>
-        <p>
-          Try and answer all the following questions within the time limit.
-          Incorrect answers will penalize your scoretime by ten seconds! You
-          have 75 seconds to answer 5 questions! Click Highscores to view all
-          the scores!
-        </p>
-        <!-- Start button -->
-        <span class="columns is-mobile is-centered">
-        <button class="button is-info">Start Quiz!</button>
+<body class="has-background-grey-lighter">
+    <!-- NavBar with html link and score/timer -->
+    <!-- Parent column defining the body -->
+    <section class="navbar has-background-info-dark column">
+        <!-- Columns within parent column -->
+        <span class="columns is-mobile is-vcentered">
+            <!-- this column centers the scores page link-->
+            <div class="column has-text-centered">
+                <a href="scores.html">
+                    <h1 class="has-text-primary has-text-weight-bold">Click here for SCORES!</h1>
+                </a>
+            </div>
+            <!-- This column is for the timer -->
+            <!-- <div class="column is-pulled-right has-text-centered">
+            <span class="timer hide">
+               <p class="is-italic has-text-warning has-text-weight-semibold"> Score / Time left:</p>
+            <p id="seconds"></p> -->
         </span>
-      </section>
-
-      <!-- Questions Display-->
-      <!-- <div id="questions" class="hide">
-            <h2 id="questionHeader"></h2>
-            <p id="choices"></p>
-        </div>  -->
-      <!-- Final Screen -->
-      <!-- <div id="results" class="hide">
-            <h2>How did you do</h2>
-        </div> -->
-
-      <!-- Enter Alias -->
-      <!-- </div> -->
+        </span>
     </section>
-  </body>
+
+    <!-- This Section is for the quiz -->
+    <section class="quizContainer">
+        <section class="section is-medium" id="startScreen">
+            <div class="columns is-mobile has-background-primary-light is-multiline">
+                <div class="column has-text-centered is-full">
+                    <h1>A Random Quiz Built With JavaScript</h1>
+                    <p>Try and answer all the following questions within the time limit. Incorrect answers will penalize
+                        your scoretime by ten seconds! You have 75 seconds to answer 5 questions! Click Highscores to
+                        view all the scores!</p>
+                </div>
+                <div class="column has-text-centered"><button class="button is-info" id="startButton">
+                        <p>Start</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/questions.js"></script>
+
+</body>
+
 </html>
+
+<!-- has-background-success
+has-background-warning
+has-background-danger -->
