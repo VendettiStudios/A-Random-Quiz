@@ -13,17 +13,26 @@ startQuiz.onclick = function () {
     } else {
         startScreen.style.display = "block";
     }
-    //  timer = setInterval(clockTick, 1000);
-    //  timerEl.textContent = sec;
     revealQuestion();
 };
-// Start Timer
-
-
-
 
 // this function will display the questions
 function revealQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     question.innerHTML = currentQuestion.title;
 };
+
+
+// Need timer function to reveal
+
+// Need answers to reveal with buttons
+
+// Need answers when clicked to display wrong or right 
+// then forward to next question, subtracting 15 seconds 
+// if incorrect
+
+// need final screen
+
+// need Alias input box
+
+// need to store and parse score and alias to scores page
