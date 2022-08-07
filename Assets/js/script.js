@@ -7,7 +7,8 @@ const timer = document.getElementById("seconds");
 let showTimer;
 let seconds = 75;
 let questionIndex = 0;
-const penalty =15
+const penalty =10;
+const stop = 0;
 
 
 
@@ -25,18 +26,19 @@ startQuiz.onclick = function () {
   timer.textContent = seconds;
   revealQuestion();
 
+
+ 
+};
+
 //   start countdown function
   function startCountdown() {
     seconds--;
     timer.textContent = seconds;
 
     if (seconds <= 0) {
-    //   endQuiz();
+      endQuiz();
     }
   }
- 
-};
-
  // renders first question and choices in array
   function revealQuestion() {
     question.innerHTML = "";
@@ -69,9 +71,22 @@ if(this.textContent===answer){
     alert.innerHTML = ("Wrong");
     seconds-=15;
 }
-questionIndex++;
-if (questionIndex!== questions.length) {
+setTimeout(function(){
+    alert.innerHTML = ""}, 2000);
+questionIndex++
+if (questionIndex === questions.length){
+    endQuiz();
+} else {
 revealQuestion();}
+};
+
+function endQuiz(){
+    clearInterval(showTimer);
+    const finalScore = document.getElementById("finalScore");
+    finalScore.textContent = ("Final Score: " + seconds);
+    question.innerHTML = "";
+    choices.innerHTML= "";
+    timer.textContent="";
 };
 
 
