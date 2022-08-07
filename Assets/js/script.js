@@ -30,59 +30,17 @@ startQuiz.onclick = function () {
   }
   // renders first question and choices in array
   function revealQuestion() {
+    // renders current question
     const currentQuestion = questions[currentQuestionIndex].title;
     const currentChoices = questions[currentQuestionIndex].choices;
     question.innerHTML = currentQuestion;
-    choices.innerHTML = currentChoices;
-//  append button to each choice
-    
+    // renders current choices
+    choices.innerHTML = "";
+    currentChoices.forEach(function(choice, i){
+        let choiceList = document.createElement("button");
+        choiceList.setAttribute("type", "choice");
+        choiceList.textContent = i + 1 + ". " + choice;
+        choices.appendChild(choiceList);
+    })
   }
 };
-
-// function startCountdown{
-
-// }
-
-// incrementer increment value by one
-// this function will display the questions
-// const currentQuestion = currentQuestionIndex[0];
-//     let currentChoices = currentQuestionIndex[0];
-
-// Need timer/score countdown to reveal when click start
-// if statements
-// function clockTick(){
-
-// }
-// Need answers to reveal with buttons
-
-// function revealChoices(){
-// let i = "choices"
-// let currentChoices = questions[0];
-
-//     console.log(currentChoices.title);
-// }
-
-// revealChoices();
-
-// Need answers when clicked to display wrong or right
-// then advance to next question, subtracting 15 seconds
-// from the countdown if incorrect
-// function choiceClick(){
-
-// }
-// need final screen that triggers when array is finished,
-// with final score/time still displayed
-// function quizEnd(){
-
-// }
-
-// need to store and parse score/time and alias to scores page upon click submit
-
-// need Alias input box
-// function checkForEnter(event){
-
-// }
-// need submit button
-// submitButton.onclick = function saveScore(){
-
-// }
