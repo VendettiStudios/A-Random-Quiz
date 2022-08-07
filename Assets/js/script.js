@@ -7,6 +7,7 @@ const timer = document.getElementById("seconds");
 let showTimer;
 let seconds = 75;
 let questionIndex = 0;
+const penalty = -15
 
 
 
@@ -56,15 +57,28 @@ startQuiz.onclick = function () {
 function choiceClick(){ 
     let answer = questions[questionIndex].answer;
     // checks if chosen answer is correct
-    if(this.textContent === answer) {
-    console.log(true);
+//     if(this.textContent === answer) {
+//     console.log(true);
     
+// }
+//     if(this.textContent !== answer) {
+//     console.log(false);
+//     seconds-=penalty;
+//     alert.innerHTML = ("Correct");
+// }
+let alert = document.getElementById("alert");
+if(this.textContent===answer){
+    result = 'correct';
+    alert.innerHTML = ("Correct");
+} else {
+    // return 'wrong';
+    alert.innerHTML = ("Wrong");
+
 }
-    if(this.textContent !== answer) {
-    console.log(false);
-    seconds-=15;
+return result;
+
 }
-}
+console.log(choiceClick)
 
 
 
