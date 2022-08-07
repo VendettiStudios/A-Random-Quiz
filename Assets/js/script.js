@@ -7,7 +7,7 @@ const timer = document.getElementById("seconds");
 let showTimer;
 let seconds = 75;
 let questionIndex = 0;
-const penalty = -15
+const penalty =15
 
 
 
@@ -68,14 +68,14 @@ function choiceClick(){
 // }
 let alert = document.getElementById("alert");
 if(this.textContent===answer){
-    result = 'correct';
+    alert.setAttribute("class", "has-text-success is-size-1")
     alert.innerHTML = ("Correct");
+    
 } else {
-    // return 'wrong';
+    alert.setAttribute("class", "has-text-danger is-size-1")
     alert.innerHTML = ("Wrong");
-
+    seconds-=15;
 }
-return result;
 
 }
 console.log(choiceClick)
