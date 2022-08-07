@@ -41,7 +41,7 @@ startQuiz.onclick = function () {
     question.innerHTML = currentQuestion;
     // renders current choices
     choices.innerHTML = "";
-    currentChoices.forEach(function(choice, i){
+    currentChoices.forEach(function(choice){
         // adds button to each choice
         let choiceList = document.createElement("button");
         choiceList.setAttribute("type", "choice");
@@ -55,10 +55,15 @@ startQuiz.onclick = function () {
 // click a choice, checks if answer is correct, -15 if incorrect -> next page 
 function choiceClick(){ 
     let answer = questions[questionIndex].answer;
-    if(this.textContent === answer) 
-    console.log(false);
-    if(this.textContent !== answer) 
+    // checks if chosen answer is correct
+    if(this.textContent === answer) {
     console.log(true);
+    
+}
+    if(this.textContent !== answer) {
+    console.log(false);
+    seconds-=15;
+}
 }
 
 
