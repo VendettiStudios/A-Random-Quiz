@@ -6,7 +6,7 @@ const timer = document.getElementById("seconds");
 // const lastQuestion = questions.length - 1
 let showTimer;
 let seconds = 75;
-let currentQuestionIndex = 0;
+let questionIndex = 0;
 
 
 
@@ -30,14 +30,14 @@ startQuiz.onclick = function () {
     timer.textContent = seconds;
 
     if (seconds <= 0) {
-      endQuiz();
+    //   endQuiz();
     }
   }
   // renders first question and choices in array
   function revealQuestion() {
     // renders current question
-    const currentQuestion = questions[currentQuestionIndex].title;
-    const currentChoices = questions[currentQuestionIndex].choices;
+    let currentQuestion = questions[questionIndex].title;
+    let currentChoices = questions[questionIndex].choices;
     question.innerHTML = currentQuestion;
     // renders current choices
     choices.innerHTML = "";
@@ -45,7 +45,7 @@ startQuiz.onclick = function () {
         // adds button to each choice
         let choiceList = document.createElement("button");
         choiceList.setAttribute("type", "choice");
-        choiceList.textContent = i + 1 + ". " + choice;
+        choiceList.textContent = choice;
         choices.appendChild(choiceList);
         choiceList.onclick = choiceClick;
     })
@@ -54,10 +54,20 @@ startQuiz.onclick = function () {
 
 // click a choice, checks if answer is correct, -15 if incorrect -> next page 
 function choiceClick(){ 
-    let answer = questions[currentQuestionIndex].answer;
-    if(this.value !== answer) ;
-    console.log(answer);
+    let answer = questions[questionIndex].answer;
+    if(this.textContent === answer) 
+    console.log(false);
+    if(this.textContent !== answer) 
+    console.log(true);
 }
+
+
+
+
+
+
+
+
 
 
 
