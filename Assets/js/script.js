@@ -34,8 +34,12 @@ startQuiz.onclick = function () {
     //   endQuiz();
     }
   }
-  // renders first question and choices in array
+ 
+};
+
+ // renders first question and choices in array
   function revealQuestion() {
+    question.innerHTML = "";
     // renders current question
     let currentQuestion = questions[questionIndex].title;
     let currentChoices = questions[questionIndex].choices;
@@ -51,21 +55,10 @@ startQuiz.onclick = function () {
         choiceList.onclick = choiceClick;
     })
   }
-};
 
 // click a choice, checks if answer is correct, -15 if incorrect -> next page 
 function choiceClick(){ 
     let answer = questions[questionIndex].answer;
-    // checks if chosen answer is correct
-//     if(this.textContent === answer) {
-//     console.log(true);
-    
-// }
-//     if(this.textContent !== answer) {
-//     console.log(false);
-//     seconds-=penalty;
-//     alert.innerHTML = ("Correct");
-// }
 let alert = document.getElementById("alert");
 if(this.textContent===answer){
     alert.setAttribute("class", "has-text-success is-size-1")
@@ -76,9 +69,10 @@ if(this.textContent===answer){
     alert.innerHTML = ("Wrong");
     seconds-=15;
 }
-
-}
-console.log(choiceClick)
+questionIndex++;
+if (questionIndex!== questions.length) {
+revealQuestion();}
+};
 
 
 
