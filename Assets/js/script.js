@@ -110,8 +110,8 @@ function onclickSbmtbtn() {
   };
   currentHighscores.push(newScore);
   window.localStorage.setItem("highscores", JSON.stringify(currentHighscores));
-  window.location.href = "scores.html"
-}
+  window.location.href = "scores.html";
+};
 
 // link submit button
 // highscores page
