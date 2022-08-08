@@ -2,7 +2,6 @@
 ​A random quiz built with javascript
 
 ## Table of contents
-​
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [User Story](#user-story)
@@ -20,7 +19,6 @@
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 ​
 ## Overview
-​
 ### The challenge
 ​
 Build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface.
@@ -62,7 +60,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ​
 ### Links
 ​
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://github.com/VendettiStudios/A-Random-Quiz/edit/master/README.md)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 ​
 ## My process
