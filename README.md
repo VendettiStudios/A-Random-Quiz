@@ -60,8 +60,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ​
 ### Links
 ​
-- Solution URL: [Add solution URL here](https://github.com/VendettiStudios/A-Random-Quiz/edit/master/README.md)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL:(https://github.com/VendettiStudios/A-Random-Quiz/edit/master/README.md)
+- Live Site URL:(https://vendettistudios.github.io/a-random-quiz/)
 ​
 ## My process
 ​
