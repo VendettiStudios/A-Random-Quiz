@@ -116,10 +116,6 @@ function onclickSbmtbtn() {
   window.location.href = "scores.html";
 };
 
-// link submit button
-// highscores page
-// save score, and parse
-
 // 1.  Create a Timer for 75 seconds, Timer is Score
 // 2.  display control for starting the quiz
 // 3.  once quiz starts, start the countdown,
