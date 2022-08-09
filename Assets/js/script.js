@@ -50,6 +50,7 @@ function revealQuestion() {
     // adds button to each choice
     let choiceList = document.createElement("button");
     choiceList.setAttribute("type", "choice");
+    choiceList.setAttribute("class", "button is-focused has-text-weight-bold is-rounded is-inverted is-outlined is-small p-4 ");
     choiceList.textContent = choice;
     choices.appendChild(choiceList);
     choiceList.onclick = choiceClick;
@@ -62,12 +63,12 @@ function choiceClick() {
   let alert = document.getElementById("alert");
   if (this.textContent === answer) {
     alert.classList.add("has-text-success");
-    alert.classList.remove("has-text-danger");
     alert.innerHTML = "Correct";
+    alert.classList.remove("has-text-danger");
   } else {
     alert.classList.remove("has-text-success");
     alert.classList.add("has-text-danger");
-    alert.innerHTML = "Wrong";
+    alert.innerHTML = "Wrong";   
     seconds -= penalty;
   }
   setTimeout(function () {
@@ -89,11 +90,13 @@ function endQuiz() {
   const finalScore = document.getElementById("finalScore");
   finalScore.textContent = "Your Final Score Is: " + seconds;
   aliasLabel.innerHTML = `
-    <label class="label">Alias</label> 
+    <label class="label">Alias:</label> 
     <div class ="control">
-        <input id="aliasInput" class="input" type="text"  placeholder="Text input">
+        <input id="aliasInput" class="input" type="text"  placeholder="Enter Alias">
     </div>
-    <button id="submitBtn" class="button is-link">Link</button>
+    <div class = "has-text-centered pt-2">
+    <button id="submitBtn" class="button is-info">Submit</button>
+    </div>
     `;
   const submitBtn = document.getElementById("submitBtn");
   submitBtn.onclick = onclickSbmtbtn;

@@ -5,67 +5,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" rel="stylesheet" />
     <title>A Random Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"
+        integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="has-background-grey-lighter">
-    <!-- NavBar with html link and score/timer -->
-    <!-- Parent column defining the body -->
-    <section class = "columns">
-    <section class="column navbar has-background-info-dark ">
-        <!-- Columns within parent column -->
-        <span class="columns is-mobile is-vcentered">
-            <!-- this column centers the scores page link-->
-            <div class="column has-text-centered">
-                <a href="scores.html">
-                    <h1 class="has-text-primary has-text-weight-bold">Click here for SCORES!</h1>
-                </a>
-            </div>
-            <!-- This column is for the timer -->
-            <div class="column is-pulled-right has-text-centered">
-                <span class="timer">
-                    <p class="is-italic has-text-warning has-text-weight-semibold"> Score / Time left:</p>
-                    <p id="seconds"></p>
-                </span>
-        </span>
-    </section>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div id="navMenu" class="navbar-menu is-active is-link">
+                <div class="navbar-start">
+                    <a class="navbar-item has-text-info has-text-weight-bold" href="scores.html">
+                        Click Here For Scores!
+                    </a>
+                </div>
 
-    <!-- This Section is for the quiz -->
-    <section class="quizContainer">
-        <section class="section is-medium" id="startScreen">
-            <div class="columns is-mobile has-background-primary-light is-multiline">
-                <div class="column has-text-centered is-full">
-                    <h1>A Random Quiz Built With JavaScript</h1>
-                    <p>Try and answer all the following questions within the time limit. Incorrect answers will penalize
-                        your scoretime by ten seconds! You have 75 seconds to answer 5 questions! Click Highscores to
-                        view all the scores!</p>
-                </div>
-                <div class="column has-text-centered"><button class="button is-info" id="startButton">
-                        <p>Start</p>
-                    </button>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <span class="timer">
+                            <p class="is-italic has-text-info has-text-weight-semibold"> Score / Time left:</p>
+                            <p class = "has-text-weight-bold" id="seconds"></p>
+                        </span>
+                    </div>
                 </div>
             </div>
-        </section>
-        <div id="quiz">
-            <h2 id="question"></h2>
-            <div id="choices"></div>
-            <div class="is-size-1" id="alert"></div>
-            <div id="prompt"></div>
-            <div>
-                <p id="finalScore"></p>
+        </div>
+    </nav>
+
+
+
+
+
+
+    <section class="hero is-link is-fullheight-with-navbar">
+        <div class="container pt-6">
+            <div id="startScreen" class="is-mobile is-desktop has-text-centered pb-4">
+                <div class="columns is-desktop is-mobile">
+                    <div class="column is-full">
+                        <h1 class="has-text-weight-bold">A Random Quiz Built With JavaScript</h1>
+                        <p class="has-text-weight-semibold">Try and answer all the following questions within the time
+                            limit. Incorrect answers will
+                            penalize
+                            your scoretime by ten seconds! You have 75 seconds to answer 5 questions! Click Highscores
+                            to
+                            view all the scores!
+                        </p>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column"><button id="startButton" class="button is-info">
+                            <p>Start</p>
+                        </button>
+                    </div>
+                </div>
+
             </div>
-            <span id="aliasLabel">
-            </span>
+            <div id="quiz">
+                <h2 id="question" class="has-text-weight-semibold has-text-centered"></h2>
+                <div id="choices" class="has-text-centered"></div>
+                <div class="is-size-1 has-text-centered" id="alert"></div>
+                <p id="prompt" class="has-text-weight-bold has-text-centered"></p>
+                <div>
+                    <p id="finalScore" class="has-text-weight-semibold has-text-centered"></p>
+                </div>
+                <span id="aliasLabel" class="has-text-centered">
+                </span>
+            </div>
         </div>
     </section>
-</section>
-    <script src="./Assets/js/questions.js"></script>
-    <script src="./Assets/js/script.js"></script>
-
-
-
 </body>
+<script src="./Assets/js/questions.js"></script>
+<script src="./Assets/js/script.js"></script>
 
 </html>

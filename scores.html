@@ -7,18 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" rel="stylesheet" />
     <title>Scores!</title>
+    <link href="style.css">
 </head>
 
 
+<body>
+    <nav class="navbar is-light has-shadow is-spaced">
+        <div class="container">
+            <div id="navMenu" class="navbar-menu is-active">
+                <div class="navbar-start">
+                    <h1 class="navbar-item">
+                        <a href="index.html" class="button is-info">Home</a>
+                    </h1>
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a id="clearScores" class="button is-link">Clear Scores</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<body class="has-background-grey-lighter">
-    <section class="navar has-background-info-dark">
-        <h1>Scores!</h1>
-        <ol id="highscoresList"></ol>
+    <section class="hero is-fullheight-with-navbar has-text-centered">
+        <div class="mt-5">
+            <h1 class="m-2 has-text-weight-bold has-text-black">Scores!</h1>
+            <p id="highscoresList" class="mb-2 has-text-black has-text-weight-bold"></p>
+        </div>
     </section>
-    <button class="button is-info" id="clearScores" >Clear</button>
-    <a href="index.html"><button class="homeScreen button is-info">Home</button></a>
+
     <script src="./Assets/js/scores.js"></script>
+
 </body>
 
 </html>
