@@ -55,8 +55,8 @@ THEN I can save my initials and my score
 
 ​
 
-- Solution URL: [Github](https://github.com/VendettiStudios/A-Random-Quiz/edit/master/README.md)
-- Live Site URL: [Live Link](https://vendettistudios.github.io/A-Random-Quiz/)
+- Solution URL: [Github](https://github.com/VendettiStudios/A-Random-Quiz-Built-With-JS)
+- Live Site URL: [Live Link](https://vendettistudios.github.io/A-Random-Quiz-Built-With-JS/)
   ​
 
 ## My process
@@ -87,8 +87,6 @@ Improvements to Styling.
   ​
 
 ## Author
-
-​
 
 - [Daniel Holloway](https://DanielHolloway.dev)
   ​
